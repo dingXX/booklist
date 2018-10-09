@@ -1,0 +1,75 @@
+.container{
+    padding: 0 30rpx;
+}
+.searchWrap{
+    margin: 30rpx 0;
+    background-color: #f1f1f1;
+    height: 88rpx;
+    border-radius: 8rpx;
+    line-height: .88rpx;
+    position: relative;
+}
+.searchWrap .searchInput{
+    height: 100%;
+    padding: 0 100rpx;
+    font-size: 28rpx;
+    color: #c0c2c2;
+}
+
+.searchWrap .searchIcon,
+.searchWrap .scanIcon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.searchWrap .searchIcon{
+    left: 30rpx;
+}
+.searchWrap .scanIcon{
+    width: 48rpx;
+    height: 48rpx;
+    right: 30rpx;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+}
+.searchList{
+    margin-top: 60rpx;
+}
+.searchList .searchItem{
+    display: flex;
+    height: 200rpx;
+    padding-bottom: 30rpx;
+}
+.searchList .bookImg{
+    width: 150rpx;
+    height: 100%;
+    border-radius: 8rpx;
+}
+.searchList .descWrap{
+    flex: 1;
+    padding-left: 40rpx;
+    position: relative;
+}
+.searchList .descWrap .name{
+    font-size: 32rpx;
+    color: #363636;
+    padding-bottom: 20rpx;
+}
+.searchList .descWrap .desc{
+    font-size: 28rpx;
+    color: #b2b3b3;
+    line-height: 40rpx;
+    height: 80rpx;
+    -webkit-line-clamp: 2;
+}
+.searchList .descWrap .tag{
+    position: absolute;
+    bottom: 0;
+    background-color: #009099;
+    color: #e8f3f4;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    text-align: center;
+    padding: 0 20rpx;
+}

@@ -1,0 +1,26 @@
+<view class="container">
+    <view class="indexWrap">
+        <view class="avator"><open-data type="userAvatarUrl"></open-data></view>
+        <view class="textWrap">
+            <view class="name"><open-data type="userNickName"></open-data></view>
+            <view class="desc">随便几个</view>
+        </view>
+    </view>
+    <view class="dataWrap">
+        <view class="dataItem">
+            <view class="value">100</view>
+            <view class="keyName">books</view>
+        </view>
+        <view class="dataItem">
+            <view class="value">100</view>
+            <view class="keyName">movies</view>
+        </view>
+    </view>
+    <view class="addWrap">
+        <view class="addBox">
+            <view class="addIcon">+</view>
+            <view class="addDesc">Click to add note</view>
+        </view>
+        
+    </view>
+</view>

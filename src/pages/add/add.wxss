@@ -1,0 +1,61 @@
+.tabBar{
+    height: 88rpx;
+    display: flex;
+    box-shadow: 0 0 20rpx #ddd; 
+    margin-bottom: 50rpx;
+    line-height: 88rpx;
+
+}
+.tabBar .tabItem{
+    flex: 1;
+    font-size: 44rpx;
+    text-align: center;
+}
+.tabBar .tabItem.current .tabText{
+    color:#3A9FA7;
+    box-shadow: 0 4rpx  #3A9FA7;
+}
+.tabBar .tabItem .tabText{
+    color: #BBC6C9;
+    display: inline-block;
+}
+
+.formItem{
+    display: flex;
+    font-size: 28rpx;
+    min-height: 88rpx; 
+    margin-top: 20rpx;
+    padding: 0 40rpx;
+}
+.formItem .label{
+    width: 140rpx;
+    line-height: 88rpx;
+    font-size: 36rpx;
+}
+.formItem .inputItem{
+    flex: 1;
+    line-height: 88rpx;
+    height: 88rpx;
+    border: 2rpx solid #ddd;
+    padding: 0 20rpx;
+    border-radius: 8rpx;
+}
+.formItem .inputItem.textareaItem{
+    height: 420rpx;
+    line-height: 60rpx;
+    padding: 20rpx;
+}
+.btnWrap{
+    background-color: rgba(255,255,255,0.5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30rpx 40rpx;
+}
+.btnWrap .btn{
+    height: 88rpx;
+    line-height: 88rpx;
+    background-color: #3A9FA7;
+    color: #fff;
+}

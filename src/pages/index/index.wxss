@@ -1,0 +1,69 @@
+.container{
+    width: 100%;
+    color: #040D08;
+}
+.yearWrap{
+    padding: 20rpx;
+}
+.yearWrap .year{
+    font-size: 50rpx;
+    
+    font-weight: bold;
+}
+.itemList .item{
+    display: flex;
+    margin-bottom: 40rpx;
+}
+.itemList .item .time{
+    width: 120rpx;
+    font-size: 28rpx;
+}
+.itemList .time .day{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.itemList .item .bookImg{
+    width: 200rpx;
+    height: 240rpx;
+    padding-right: 20rpx;
+}
+.itemList .item .descWrap{
+    flex: 1;
+    position: relative;
+}
+.itemList .item .descWrap .name{
+    font-size: 32rpx;
+    color: #363636;
+    padding-bottom: 20rpx;
+}
+.itemList .item .descWrap .desc{
+    font-size: 28rpx;
+    color: #b2b3b3;
+    line-height: 40rpx;
+    max-height: 160rpx;
+    -webkit-line-clamp: 4;
+}
+.itemList .item .descWrap .tag{
+    display: inline-block;
+    background-color: #009099;
+    color: #e8f3f4;
+    height: 36rpx;
+    line-height: 36rpx;
+    font-size: 24rpx;
+    text-align: center;
+    padding: 0 10rpx;
+    margin-right: 10rpx;
+}
+.itemList .item .text{
+    flex: 1;
+    line-height: 40rpx;
+    max-height: 240rpx;
+    min-height: 80rpx;
+    font-size: 28rpx;
+    text-overflow: -o-ellipsis-lastline;  
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    display: -webkit-box;  
+    -webkit-line-clamp: 6;  
+    -webkit-box-orient: vertical;
+}

@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/add/add",
+    "pages/about/about",
+    "pages/search/search",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "阅读感想清单",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"images/menu.png",
+      "selectedIconPath":"images/menu-select.png"
+    }, {
+      "pagePath": "pages/add/add",
+      "text": "添加",
+      "iconPath":"images/add.png",
+      "selectedIconPath":"images/add-select.png"
+    }, {
+      "pagePath": "pages/about/about",
+      "text": "关于",
+      "iconPath":"images/user.png",
+      "selectedIconPath":"images/user-select.png"
+    }],
+    "color":"#BBC6C9",
+    "backgroundColor":"#fff",
+    "selectedColor":"#3A9FA7"
+  },
+  "debug": true
+}

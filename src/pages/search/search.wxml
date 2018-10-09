@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="searchWrap">
+        <icon type="search" class="searchIcon" size="24" color="#d0d1d1"/>
+        <input class="searchInput" placeholder="这是一个可以自动聚焦的input" auto-focus />
+        <view class="scanIcon"></view>
+    </view>
+    <view class="searchList">
+        <view class="searchItem">
+            <image class="bookImg" src="/images/book.jpg" mode="scaleToFill"></image>
+            <view class="descWrap">
+                <view class="name">楚门的世界</view>
+                <view class="desc ellipsis">描述的内容描述的内容描述的内容描述的内容述的内容描述的内容描述的内容描述的内容描述的描述的内容内容</view>
+                <view class="tag">书籍</view>
+            </view>
+        </view>
+    </view>
+</view>
