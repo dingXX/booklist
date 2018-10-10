@@ -1,9 +1,11 @@
 const Koa = require('koa');
 const routers = require('./routers');
+const jsonResponse = require('./routers/jsonResponse');
 const path = require('path');
 const staticResource = require('koa-static');
 const app = new Koa();
 routers(app);
+jsonResponse(app);
 
 // 静态资源目录对于相对入口文件index.js的路径
 const staticPath = './static';

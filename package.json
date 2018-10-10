@@ -20,5 +20,8 @@
     "koa-static": "^5.0.0",
     "nodemon": "^1.18.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "async-request": "^1.2.0",
+    "request": "^2.88.0"
+  }
 }
