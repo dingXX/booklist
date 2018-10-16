@@ -7,8 +7,8 @@ CREATE TABLE USER (
     gender CHAR(1),
     nickName VARCHAR(50),
     avatarUrl VARCHAR(255),
-    create_time datetime,
-    update_time datetime,
+    create_time int,
+    update_time int,
     PRIMARY KEY  ( id )
 )CHARSET=utf8;
 
@@ -24,7 +24,7 @@ CREATE TABLE tought(
     type VARCHAR(20) NOT NULL,
     name VARCHAR(100) NOT NULL,
     content VARCHAR(500),
-    create_time datetime NOT NULL,
-    update_time datetime NOT NULL,
+    create_time int,
+    update_time int,
     PRIMARY KEY  ( id )
 )CHARSET=utf8;

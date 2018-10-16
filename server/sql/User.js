@@ -1,6 +1,6 @@
 const DataType = require('sequelize');
 const sequelize = require('./db');
-var User = sequelize.define('pet', {
+let User = sequelize.define('user', {
     id: {
         type: DataType.INTEGER,
         primaryKey: true,
@@ -12,7 +12,7 @@ var User = sequelize.define('pet', {
     openId: {
         type: DataType.STRING(100),
         allowNull:false,
-
+        unique:true,
     },
     gender: {
         type: DataType.STRING(1),
@@ -33,3 +33,5 @@ var User = sequelize.define('pet', {
     timestamps: false,
     freezeTableName: true,
 });
+
+module.exports = User;
