@@ -1,5 +1,6 @@
 const KoaRouter = require('koa-router');
 const fs = require('fs');
+const koaBody = require('koa-body');
 let router = new KoaRouter();
 const controllers = fs.readdirSync(__dirname + '/../controllers');
 
@@ -21,6 +22,7 @@ controllers.forEach(function (item) {
             console.log(routePath);
             router[controller.actions[action].method](
                 routePath,
+                // validateHandler(controller.actions[action]),
                 controller['action' + actionMethod]);
             if (action === 'index') {
                 router[controller.actions[action].method](
@@ -29,9 +31,11 @@ controllers.forEach(function (item) {
             }
         });
     }
-})
+});
+
 
 module.exports =  app => {
     // 加载路由中间件
     app.use(router.routes()).use(router.allowedMethods());
 };
+
