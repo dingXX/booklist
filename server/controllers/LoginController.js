@@ -1,9 +1,7 @@
 const request = require('../routers/request');
 const weixinConfig = require('../config/weixin');
-const query = require('../sql/asyncDB');
 const WXBizDataCrypt = require('../lib/WXBizDataCrypt');
 const UserDB = require('../sql/User.js');
-console.log(UserDB);
 exports.actions = {
     index: {
         isAPI: false,
@@ -71,7 +69,6 @@ exports.actionSetUserInfo = async function(ctx) {
                 create_time: Math.floor(Date.now() / 1000)
             }
         });
-        console.log(user);
         if (!user[0].unionId) {
             user = await UserDB.update({
                 nickName,
@@ -85,11 +82,13 @@ exports.actionSetUserInfo = async function(ctx) {
                 }
             });
         }
+        ctx.cookies.set('openId',openId,{
+            httpOnly:true,
+            maxAge:1000*60*60*24*14
+        });
         return ctx.JsonResponse.success(user);
     }catch(err){
         return ctx.JsonResponse.error(err);
     }
-    
-
 };
 
