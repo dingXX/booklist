@@ -1,6 +1,6 @@
 const DataType = require('sequelize');
 const sequelize = require('./db');
-let ThirdBind = sequelize.define('user', {
+let ThirdBind = sequelize.define('THIRD_BIND', {
     id: {
         type: DataType.INTEGER,
         primaryKey: true,
@@ -28,14 +28,14 @@ let ThirdBind = sequelize.define('user', {
     avatarUrl: {
         type: DataType.STRING(255),
     },
-    createAt: {
+    createdAt: {
         type: DataType.INTEGER,
     },
-    updateAt: {
+    updatedAt: {
         type: DataType.INTEGER,
     },
 }, {
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
 });
 

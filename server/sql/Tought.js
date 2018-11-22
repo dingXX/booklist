@@ -24,14 +24,14 @@ let User = sequelize.define('tought', {
     image:{
         type: DataType.TEXT,
     },
-    create_time: {
+    createdAt: {
         type: DataType.INTEGER,
     },
-    update_time: {
+    updatedAt: {
         type: DataType.INTEGER,
     },
 }, {
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
 });
 

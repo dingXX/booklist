@@ -5,8 +5,8 @@ CREATE TABLE USER (
     gender CHAR(1) comment '性别',
     nickName VARCHAR(50) comment '用户昵称',
     avatarUrl VARCHAR(255) comment '用户头像',
-    createAt int comment '创建时间',
-    updateAt int comment '更新时间',
+    createdAt DATETIME comment '创建时间',
+    updatedAt DATETIME comment '更新时间',
     PRIMARY KEY  ( uid )
 )CHARSET=utf8;
 
@@ -20,14 +20,12 @@ CREATE TABLE THIRD_BIND (
     type VARCHAR(50) NOT NULL comment '第三方名称',
     nickName VARCHAR(50) comment '用户昵称',
     avatarUrl VARCHAR(255) comment '用户头像',
-    createAt int comment '创建时间',
-    updateAt int comment '更新时间',
+    createdAt DATETIME comment '创建时间',
+    updatedAt DATETIME comment '更新时间',
     PRIMARY KEY  ( id )
 )CHARSET=utf8;
 
 # 新增用户
-INSERT INTO USER (openid, create_time) 
-    VALUES ('suibian',CURTIME());
 
 # 新增感想表
 DROP TABLE tought;
@@ -38,7 +36,7 @@ CREATE TABLE tought(
     name VARCHAR(100) NOT NULL,
     content TEXT,
     image TEXT,
-    create_time int,
-    update_time int,
+    createdAt DATETIME,
+    updatedAt DATETIME,
     PRIMARY KEY  ( id )
 )CHARSET=utf8;

@@ -15,14 +15,14 @@ let User = sequelize.define('user', {
     avatarUrl: {
         type: DataType.STRING(255),
     },
-    createAt: {
+    createdAt: {
         type: DataType.INTEGER,
     },
-    updateAt: {
+    updatedAt: {
         type: DataType.INTEGER,
     },
 }, {
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
 });
 
