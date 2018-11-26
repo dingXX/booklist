@@ -2,7 +2,6 @@ const UserDB = require('../sql/User');
 const ThirdBindDB = require('../sql/ThirdBind');
 class User{
     constructor(session){
-        console.log(session,'session');
         this.session = session || {};
     }
     async getUser(opts={}){
@@ -24,7 +23,6 @@ class User{
                 },
                 attributes:['uid']
             });
-            console.log(uid,'uid');
         }
         if (uid) {
              user = await UserDB.findOne({
@@ -34,7 +32,6 @@ class User{
                 attributes:['uid','nickName','avatarUrl']
             });
         }
-        console.log(user,'user');
         return user;
         
     }
@@ -62,6 +59,20 @@ class User{
                 openId:info.openId
             }
         });
+    }
+    static async getUserById(uid){
+        if (!uid) {
+            throw new Error('用户未登录');
+        }
+        const user = await UserDB.findOne({
+            where: {
+                uid: uid
+            }
+        });
+        if (!user.uid) {
+            throw new Error('无该用户');
+        }
+        return user;
     }
 
 }

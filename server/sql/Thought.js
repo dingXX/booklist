@@ -6,9 +6,9 @@ let User = sequelize.define('tought', {
         primaryKey: true,
         autoIncrement: true,
     },
-    openId: {
-        type: DataType.STRING(100),
-        allowNull:false,
+    uid:{
+        type: DataType.INTEGER,
+        allowNull:false
     },
     type: {
         type: DataType.STRING(20),

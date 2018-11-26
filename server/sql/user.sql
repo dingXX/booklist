@@ -30,13 +30,13 @@ CREATE TABLE THIRD_BIND (
 # 新增感想表
 DROP TABLE tought;
 CREATE TABLE tought(
-    id INT NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT comment '自增id',
     uid INT NOT NULL comment '用户id',
-    type VARCHAR(20) NOT NULL,
-    name VARCHAR(100) NOT NULL,
-    content TEXT,
-    image TEXT,
-    createdAt DATETIME,
-    updatedAt DATETIME,
+    type VARCHAR(20) NOT NULL comment '感想类型',
+    name VARCHAR(100) NOT NULL comment '书籍/电影名称',
+    content TEXT comment '感想',
+    image TEXT comment '书籍电影海报图',
+    createdAt DATETIME comment '创建时间',
+    updatedAt DATETIME comment '更新时间',
     PRIMARY KEY  ( id )
 )CHARSET=utf8;
