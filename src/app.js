@@ -1,13 +1,8 @@
 //app.js
+import {login} from './api/api';
 App({
-  onLaunch: function () {
-    wx.login({
-      success:ret=>{
-        console.log(ret);
-      }
-    });
-  },
-  globalData: {
-  }
+    onLaunch: function() {
+        login();
+    },
+    globalData: {}
 })
-// 023tVvDU1tGkLW02FDBU1kFkDU1tVvDq

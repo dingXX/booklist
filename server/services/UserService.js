@@ -8,9 +8,10 @@ class User{
         let uid = this.session.uid;
         const {type,openId,unionId} = opts;
         let user = null;
+        console.log(uid,'uid');
         if (!uid && type && openId) {
             // 如果有openId的话，根据openId 查一下用户存不存在
-            uid = await ThirdBindDB.findOne({
+            user = await ThirdBindDB.findOne({
                 where:{
                     type,
                     openId,
@@ -23,11 +24,12 @@ class User{
                 },
                 attributes:['uid']
             });
+            console.log(user);
         }
-        if (uid) {
+        if (user) {
              user = await UserDB.findOne({
                 where:{
-                    uid
+                    uid:user.uid
                 },
                 attributes:['uid','nickName','avatarUrl']
             });
