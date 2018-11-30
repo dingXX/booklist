@@ -1,5 +1,6 @@
-const UserDB = require('../sql/User');
-const ThirdBindDB = require('../sql/ThirdBind');
+const DB = require('../sql/db');
+const UserDB = DB.models.USER;
+const ThirdBindDB = DB.models.THIRD_BIND;
 class User{
     constructor(session){
         this.session = session || {};

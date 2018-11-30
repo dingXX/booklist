@@ -1,5 +1,6 @@
 const UserService = require('./UserService');
-const ThoughtDB = require('../sql/Thought');
+const DB = require('../sql/db');
+const ThoughtDB = DB.models.tought;
 class ThoughtService {
     constructor(uid) {
         this.uid = uid;

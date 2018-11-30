@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel-node server/index.js",
-    "watch": "nodemon server/index.js --exec babel-node"
+    "watch": "nodemon server/index.js --exec babel-node",
+    "db":"sequelize-auto -o './server/sql/models' -d booklist -h 127.0.0.1 -u root -e mysql"
   },
   "author": "",
   "license": "ISC",

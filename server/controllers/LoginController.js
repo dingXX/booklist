@@ -1,7 +1,6 @@
 const request = require('../routers/request');
 const weixinConfig = require('../config/weixin');
 const WXBizDataCrypt = require('../lib/WXBizDataCrypt');
-const UserDB = require('../sql/User.js');
 const UserService = require('../services/UserService');
 exports.actions = {
     index: {
